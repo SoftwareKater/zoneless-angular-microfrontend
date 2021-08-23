@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'counter';
+
+  public state = { counter: 0 };
+
+  public onClick(): void {
+    this.state.counter += 1;
+    console.log('New counter value: ', this.state.counter);
+  }
 }

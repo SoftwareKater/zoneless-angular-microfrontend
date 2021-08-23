@@ -1,0 +1,22 @@
+:host {
+  border: 1px solid black;
+  padding: 4px;
+  margin: 4px;
+  display: flex;
+  width: 128px;
+  height: auto;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  margin-left: 16px;
+}
