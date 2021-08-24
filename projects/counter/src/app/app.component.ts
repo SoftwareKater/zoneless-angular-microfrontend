@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,11 @@ export class AppComponent {
 
   public state = { counter: 0 };
 
+  constructor(private readonly cdr: ChangeDetectorRef) { }
+
   public onClick(): void {
     this.state.counter += 1;
     console.log('New counter value: ', this.state.counter);
+    this.cdr.detectChanges();
   }
 }
